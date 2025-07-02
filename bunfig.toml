@@ -1,0 +1,15 @@
+[install]
+# Automatically install peer dependencies
+auto = "auto"
+
+[install.cache]
+# Use faster installation with better caching
+dir = "~/.bun/install/cache"
+
+[run]
+# Enable hot reloading for development
+hot = true
+
+[test]
+# Use Bun's built-in test runner
+preload = []

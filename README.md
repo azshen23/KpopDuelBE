@@ -1,6 +1,6 @@
 # KpopDuel Server
 
-Real-time multiplayer K-pop guessing game server built with Node.js, Express, and Socket.io.
+Real-time multiplayer K-pop guessing game server built with Bun, Express, and Socket.io.
 
 ## Features
 
@@ -14,7 +14,7 @@ Real-time multiplayer K-pop guessing game server built with Node.js, Express, an
 
 ## Tech Stack
 
-- **Runtime**: Node.js
+- **Runtime**: Bun
 - **Framework**: Express.js
 - **Real-time Communication**: Socket.io
 - **Language**: TypeScript
@@ -22,8 +22,7 @@ Real-time multiplayer K-pop guessing game server built with Node.js, Express, an
 
 ## Prerequisites
 
-- Node.js (v16 or higher)
-- npm or yarn
+- Bun (v1.0 or higher)
 
 ## Installation
 
@@ -35,21 +34,16 @@ cd kpopduel-server
 
 2. Install dependencies:
 ```bash
-npm install
+bun install
 ```
 
-3. Build the project:
+3. Start the server:
 ```bash
-npm run build
-```
+# Development mode with hot reload
+bun run dev
 
-4. Start the server:
-```bash
-# Development mode with auto-reload
-npm run dev
-
-# Production mode
-npm start
+# Production mode (builds and runs)
+bun run build && bun run start
 ```
 
 ## Configuration
@@ -58,7 +52,7 @@ npm start
 
 ```bash
 PORT=3001                    # Server port (default: 3001)
-NODE_ENV=development         # Environment mode
+BUN_ENV=development          # Environment mode
 ```
 
 ### Audio Sources
@@ -186,18 +180,15 @@ kpopduel-server/
 ### Testing
 
 ```bash
-# Run tests
-npm test
-
-# Run with coverage
-npm run test:coverage
+# Run tests with Bun's built-in test runner
+bun test
 ```
 
 ### Debugging
 
 Enable debug logging:
 ```bash
-DEBUG=socket.io:* npm run dev
+DEBUG=socket.io:* bun run dev
 ```
 
 ## Production Deployment
